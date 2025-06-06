@@ -10,8 +10,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* This centers content vertically */
+    align-items: center;     /* This centers content horizontally */
     overflow-x: hidden;
     position: relative;
     background-color: #0a0a0a;
@@ -21,7 +21,8 @@ body {
     background-attachment: fixed;
     font-family: 'Amiri', serif;
     color: #f8f3e6;
-    padding: 20px;
+    padding: 20px; /* Keep some padding around the edges */
+    text-align: center; /* Add this to center inline text elements */
 }
 
 body::before {
@@ -35,27 +36,14 @@ body::before {
     z-index: -1;
 }
 
-.content-wrapper {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
-    border: 1px solid #d4af37;
-    margin: auto;
-}
+/* IMPORTANT: The .content-wrapper CSS rule has been removed from here */
 
 /* Greeting Quote */
 .greeting-quote {
     font-size: 1.5rem;
     text-align: center;
     width: 100%;
+    max-width: 800px; /* Added max-width to constrain text width */
     margin: 0 auto 2rem auto;
     padding: 15px;
     text-shadow: 0 0 5px #d4af37;
@@ -69,6 +57,7 @@ body::before {
     font-size: 1.2rem;
     text-align: center;
     width: 100%;
+    max-width: 800px; /* Added max-width to constrain text width */
     margin: 2rem auto;
     padding: 20px;
     line-height: 1.8;
@@ -143,6 +132,9 @@ body::before {
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
+    align-items: center; /* Center buttons horizontally */
+    width: 100%;
+    max-width: 300px; /* Constrain button group width */
 }
 
 .change-name-btn, .share-btn {
@@ -161,6 +153,7 @@ body::before {
     overflow: hidden;
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
     animation: pulse 2s infinite;
+    width: 100%; /* Make buttons take full width of button-group */
 }
 
 .share-btn {
@@ -282,7 +275,7 @@ body::before {
     .urdu-message span.highlight { font-size: 1.2rem; }
     .urdu-message .eid-final { font-size: 1.5rem; }
     .change-name-btn, .share-btn { font-size: 1rem; padding: 10px 20px; }
-    .content-wrapper { padding: 20px; }
+    /* .content-wrapper { padding: 20px; } - This rule is now removed */
 }
 
 @media (max-width: 480px) {
@@ -290,5 +283,5 @@ body::before {
     .greeting-quote { font-size: 1rem; padding: 10px; }
     .urdu-message { font-size: 0.9rem; padding: 10px; }
     .change-name-btn, .share-btn { font-size: 0.9rem; padding: 8px 15px; }
-    .content-wrapper { padding: 15px; }
+    /* .content-wrapper { padding: 15px; } - This rule is now removed */
 }
